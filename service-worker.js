@@ -1,7 +1,9 @@
 const CACHE_NAME = 'nagoya-travel-v1';
 const urlsToCache = [
   './',
-  './index.html'
+  './index.html',
+  './icon.png',
+  './manifest.json'
 ];
 
 // 설치 시 캐시 저장
@@ -10,6 +12,7 @@ self.addEventListener('install', event => {
     caches.open(CACHE_NAME)
       .then(cache => cache.addAll(urlsToCache))
   );
+  self.skipWaiting(); // 즉시 활성화
 });
 
 // 네트워크 요청 가로채기
@@ -36,4 +39,5 @@ self.addEventListener('activate', event => {
       );
     })
   );
+  self.clients.claim(); // 모든 탭에 즉시 제어권 가져오기
 });
