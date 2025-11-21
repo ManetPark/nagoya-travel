@@ -110,7 +110,14 @@
 
         // --- 기본 데이터 (처음 DB가 비었을 때만 사용) ---
         const defaultItinerary = [
-            { id: "day1", day: 1, date: "1월 31일 (금)", title: "나고야 도착 & 사카에", location: "나고야 시내", activities: [] },
+            { id: "day1", day: 1, date: "1월 31일 (금)", title: "나고야 도착 & 사카에", location: "나고야 시내", activities: [
+                    { time: "10:00", title: "나고야 주부 공항 도착", desc: "뮤스카이 열차 탑승 (나고야역행, 약 28분)", icon: "train" },
+                    { time: "12:00", title: "호텔 체크인 & 짐 보관", desc: "나고야역 또는 사카에역 근처 추천", icon: "hotel" },
+                    { time: "13:00", title: "점심: 미소카츠", desc: "야바톤 등 나고야 명물 된장 돈까스", icon: "utensils" },
+                    { time: "15:00", title: "나고야 성", desc: "천수각 및 혼마루어전 관람", icon: "mappin" },
+                    { time: "18:00", title: "사카에 지구", desc: "오아시스21 야경 & 미라이 타워", icon: "shoppingbag" },
+                    { time: "20:00", title: "저녁: 테바사키 & 맥주", desc: "세카이노 야마짱 닭날개 튀김", icon: "utensils" }
+                ] },
             { id: "day2", day: 2, date: "2월 1일 (토)", title: "근교: 다카야마 & 게로", location: "다카야마/게로", activities: [] },
             { id: "day3", day: 3, date: "2월 2일 (일)", title: "나고야 복귀 & 오스", location: "나고야", activities: [] },
             { id: "day4", day: 4, date: "2월 3일 (월)", title: "모닝 & 귀국", location: "나고야", activities: [] }
